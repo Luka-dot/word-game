@@ -5,4 +5,6 @@ import App from './App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+test('App component render without error', () => {
 
+});
