@@ -5,8 +5,12 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { findByTestAttr, checkProps } from '../../test/testUtils';
 import Congrats from './congrats';
 
+
+const defaultProps = { success: false};
+
 const setup = (props={}) => {
-    return shallow(<Congrats {...props} />)
+    const setupProps = { ...defaultProps, ...props }   // setting default with option to overide with props.
+    return shallow(<Congrats {...setupProps} />)
 } 
 
 Enzyme.configure({ adapter: new Adapter() });
